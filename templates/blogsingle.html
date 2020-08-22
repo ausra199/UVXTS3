@@ -1,4 +1,6 @@
 {% load static %}
+{% load social_share %}
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -81,7 +83,8 @@
 			<div class="blog__banner pt-4 pb-5">
 				<img src="{% static 'img/blog-single/banner.jpg' %}" alt="">
 			</div>
- -->
+		 -->
+
 			<div class="blog__container post__footer">
 				<div class="row">
 					<div class="col-md-6">
@@ -90,7 +93,8 @@
 					<div class="col-md-6">
 						<div class="post__share">
 							<span>Share:</span>
-							<a href="#"> <i class="fa fa-facebook"></i></a>
+
+							<a href="{% post_to_facebook blog.get_absolute_url "Post to Facebook!" %}"> <i class="fa fa-facebook"></i></a>
 							<a href="#"><i class="fa fa-instagram"></i></a>
 							<a href="#"><i class="fa fa-youtube-play"></i></a>
 						</div>

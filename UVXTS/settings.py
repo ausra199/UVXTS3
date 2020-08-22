@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'tattoo_gallery',
     'django_filters',
     'cloudinary',
+    'django_social_share'
 
     #'django_social_share',
 ]
@@ -77,7 +78,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                #'django.core.context_processors.request',
             ],
         },
     },
