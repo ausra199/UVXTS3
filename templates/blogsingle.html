@@ -6,7 +6,7 @@
 <head>
 	<title>UVXTS | Tattoo</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="UVXTS | Tattoo">
+	<meta name="description" content="Ink under the skin as temporary as life">
 	<meta name="keywords" content="tattoo, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Stylesheets -->
@@ -84,22 +84,19 @@
 				<img src="{% static 'img/blog-single/banner.jpg' %}" alt="">
 			</div>
 		 -->
-
+		<div class="col-md-6">
 			<div class="blog__container post__footer">
 				<div class="row">
-					<div class="col-md-6">
 
-					</div>
-					<div class="col-md-6">
-						<div class="post__share">
-							<span>Share:</span>
 
-							<a href="{% post_to_facebook blog.get_absolute_url 'Post to Facebook!' %}"> <i class="fa fa-facebook"></i></a>
-							<a href="{% post_to_facebook blog.title %}"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-instagram"></i></a>
-							<a href="#"><i class="fa fa-youtube-play"></i></a>
-						</div>
-					</div>
+							<div class="post__share">
+
+								<span>Share:</span>
+								{% post_to_facebook blog.get_absolute_url  'Post to Facebook!' %}
+
+							</div>
+
+					 </div>
 				</div>
 			</div>
 			<div class="blog__container comment__area">
@@ -167,3 +164,8 @@
 	<script src= "{% static 'js/main.js' %}"></script>
 
 
+<!--	<a href="{% post_to_facebook blog.title %}"><i class="fa fa-facebook"></i></a>
+
+							<a href="#"><i class="fa fa-instagram"></i><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-youtube-play"></i></a>
+						-->
