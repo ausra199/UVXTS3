@@ -1,0 +1,105 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>UVXTS | Tattoo</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="UVXTS | Tattoo">
+	<meta name="keywords" content="tattoo, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Stylesheets -->
+
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/fresco.css' %}">
+
+
+	<!-- Main Stylesheets  -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header Section -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-3 order-2 order-sm-1">
+					<div class="header__social">
+						<img src="{% static 'img/logo_uvxts.png' %}" alt="" style="width:30%">
+					</div>
+				</div>
+
+			<!-- Social Section -->
+			{% include "./social.html" %}
+			<!-- Social Section end -->
+
+			</div>
+			<nav class="main__menu">
+				<ul class="nav__menu">
+					<li><a href="{% url 'index' %}">Home</a></li>
+					<li><a href="{% url 'about' %}">About</a></li>
+					<li><a href="{% url 'gallery' %}"class="menu--active">Gallery</a>
+											<ul class="sub__menu">
+												<li><a href="{% url 'gallery_sketches' %}">Sketches</a></li>
+											</ul>
+					<li><a href="{% url 'blog' %}" >Blog</a></li>
+					<li><a href="{% url 'contact' %}">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header Section end -->
+
+	<!-- Filter -->
+
+	<!--
+	<div class="col-sm-4 col-md-3 order-3 order-sm-3">
+	<div class="header__switches">
+	<div class="container-fluid">
+	-->
+
+	<header class="header">
+				<nav class="main__menu">
+				<Form method="get">
+					<div class="row">
+						<button class=" btn btn-light"  type="submit" aria-label=".nnn..">{{ myFilter.form }} search</button>
+						<!--
+					<p> {{ myFilter.form }}</p>
+					<button class="btn btn-outline-light btn-light btn-sm" type="submit"><i class="fa fa-search"></i></button>
+					-->
+					</div>
+				</Form>
+				</nav>
+
+	</header>
+
+
+	<!--  end -->
+
+	<!--  About Page end -->
+	{% include "./incl_sketches.html" %}
+	<!--  end -->
+
+
+	<!-- Footer Section -->
+	{% include "./footer.html" %}
+	<!-- Footer Section end -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src= "{% static 'js/vendor/jquery-3.2.1.min.js' %}"></script>
+	<script src= "{% static 'js/jquery.slicknav.min.js' %}"></script>
+	<script src= "{% static 'js/slick.min.js' %}"></script>
+	<script src= "{% static 'js/fresco.min.js' %}"></script>
+	<script src= "{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

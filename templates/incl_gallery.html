@@ -1,0 +1,55 @@
+{% load static %}
+	<!-- About Page -->
+	<div class="gallery__page">
+		<div class="gallery__warp">
+			<div class="row">
+				{% for gallery in gallery %}
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="{{ gallery.image.url }}" data-fresco-group="gallery">
+						<img src="{{ gallery.image.url }}" alt="">
+					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- About Page end -->
+
+
+<!--
+<div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+	  {% for sketches in sketches %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" data-src="{{ sketches.image.url }}"  >
+               <img class="card-img-top" src="{{ sketches.image.url }}" alt="Card image cap">
+                <div class="card-body">
+                    <h6 class="card-title">{{ sketches.title }}</h6>
+                  <!-- <p class="card-text">{{ sketches.title }}</p> -->
+<!--
+
+						<div class="card-footer">
+  					    <small class="text-muted">{{ sketches.type }}</small>
+   				 	 </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+             {% endfor %}
+          </div>
+        </div>
+      </div>
+
+-->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src= "{% static 'js/vendor/jquery-3.2.1.min.js' %}"></script>
+	<script src= "{% static 'js/jquery.slicknav.min.js' %}"></script>
+	<script src= "{% static 'js/slick.min.js' %}"></script>
+	<script src= "{% static 'js/fresco.min.js' %}"></script>
+	<script src= "{% static 'js/main.js' %}"></script>

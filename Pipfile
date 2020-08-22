@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+gunicorn = "*"
+django-heroku = "*"
+python-decouple = "*"
+dj-database-url = "*"
+pillow = "*"
+whitenoise = {extras = ["brotli"], version = "*"}
+cloudinary = "*"
+django-cloudinary-storage = "*"
+django-embed-video = "*"
+django-filter = "*"
+django-utils-six = "*"
+
+[requires]
+python_version = "3.8"
