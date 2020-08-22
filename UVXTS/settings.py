@@ -160,10 +160,14 @@ EMAIL_USE_SSL = False
 '''
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'YOUR_CLOUD_NAME',
-    'API_KEY': 'YOUR_API_KEY',
-    'API_SECRET': 'YOUR_API_SECRET',
+    'CLOUD_NAME': 'hrzgda1dy',
+    'API_KEY': '885231327596278',
+    'API_SECRET': 'VpA5p54njb2yh2pb7d6IA2ZQa9Q',
 }
+'''
+CLOUDINARY_URL=cloudinary://885231327596278:VpA5p54njb2yh2pb7d6IA2ZQa9Q@hrzgda1dy
+'''
+
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 django_heroku.settings(locals())
