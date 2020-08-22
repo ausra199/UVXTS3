@@ -94,7 +94,8 @@
 						<div class="post__share">
 							<span>Share:</span>
 
-							<a href="{% post_to_facebook blog.get_absolute_url "Post to Facebook!" %}"> <i class="fa fa-facebook"></i></a>
+							<a href="{% post_to_facebook blog.get_absolute_url 'Post to Facebook!' %}"> <i class="fa fa-facebook"></i></a>
+							<a href="{% post_to_facebook blog.title %}"><i class="fa fa-facebook"></i></a>
 							<a href="#"><i class="fa fa-instagram"></i></a>
 							<a href="#"><i class="fa fa-youtube-play"></i></a>
 						</div>
