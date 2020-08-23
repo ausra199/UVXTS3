@@ -4,7 +4,7 @@ from .filters import SketchesFilter
 
 # Create your views here.
 def sketches(request):
-    sketches = Sketches.objects.all()
+    sketches = Sketches.objects.order_by('-date')
     myFilter = SketchesFilter(request.GET, queryset=sketches)
     filtered = SketchesFilter(request.GET, queryset=sketches)
     sketches = myFilter.qs
@@ -15,4 +15,5 @@ def sketches(request):
         'myFilter': myFilter,
             }
     return render(request, 'gallery_sketches.html', context)
+
 

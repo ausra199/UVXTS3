@@ -46,9 +46,7 @@ INSTALLED_APPS = [
     'tattoo_gallery',
     'django_filters',
     'cloudinary',
-    'django_social_share'
 
-    #'django_social_share',
 ]
 
 MIDDLEWARE = [

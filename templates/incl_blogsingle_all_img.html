@@ -1,29 +1,13 @@
 {% load static %}
+<br>
+		<div class="blog__container">
+				<div class="blog__header">
+					<!-- <div class="blog__cata">Tattoo</div> -->
+					<div class="blog__item set-bg" data-setbg="{{ blog.image.url }}"> </div>
+				</div>
+		</div>
 
 	<!-- Blog Page -->
-<!--
-	<div class="blog__slider">
-
-			<div class="blog__slider__item">
-				{% for blog in blogs %}
-				<img src="{{ blog.image.url }}" alt="">
-				{% endfor %}
-			</div>
-	</div>
-
-	-->
-
-		<div class="blog__slider">
-			<div class="blog__slider__item">
-				<img src="{% static 'img/blog-single/1.jpg' %}" alt="">
-			</div>
-			<div class="blog__slider__item">
-				<img src="{% static 'img/blog-single/2.jpg' %}" alt="">
-			</div>
-			<div class="blog__slider__item">
-				<img src="{% static 'img/blog-single/3.jpg' %}" alt="">
-			</div>
-		</div>
 
 
 	<!--====== Javascripts & Jquery ======-->

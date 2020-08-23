@@ -19,12 +19,13 @@
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
-	<div>
 
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=undefined&product=undefined' async='async'></script>
-		</div>
+	<!-- Share to social media -->
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f4179717c7c450012e92255&product=sop' async='async'></script>
+
 </head>
-<body>
+
+
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -32,7 +33,8 @@
 
 	<!-- Header Section -->
 	<header class="header">
-		<div class="container-fluid">
+
+
 			<div class="row">
 				<div class="col-sm-4 col-md-3 order-2 order-sm-1">
 					<div class="header__social">
@@ -40,35 +42,46 @@
 					</div>
 				</div>
 
-			<!-- Social Section -->
+		<!-- Social Section -->
 			{% include "./social.html" %}
-			<!-- Social Section end -->
+		<!-- Social Section end -->
 
 			</div>
-			<nav class="main__menu">
-				<ul class="nav__menu">
-					<li><a href="{% url 'index' %}">Home</a></li>
-					<li><a href="{% url 'about' %}">About</a></li>
-					<li><a href="{% url 'gallery' %}">Gallery</a></li>
-					<li><a href="{% url 'blog' %}" class="menu--active">Blog</a></li>
-					<li><a href="{% url 'contact' %}">Contact</a></li>
-				</ul>
-			</nav>
+
+			<!-- Social Section -->
+<!--
+		<div class="row">
+		<div class="col-sm-12 col-md-12 order-12 order-sm-12">
+
+				<div class="header__switches"> -->
+
+<!-- Back  -------------------->
+		<div class="row no-gutters">
+			<div class="col-4 align-self-end">
+				<nav class="main__menu">
+					<ul class="nav__menu">
+						<li><a href="{% url 'blog' %}" class="menu--active"> back ></a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
+
 	</header>
 	<!-- Header Section end -->
 
-	<!-- Blog Page -->
+	<!-- Blog Page
 	<div class="blog__single__page">
+	-->
 
 		<!-- Footer Section -->
 		{% include "./incl_blogsingle_all_img.html" %}
-	<!-- Footer Section end -->
+		<!-- Footer Section end -->
 
 		<article class="blog__article">
 			<div class="blog__container">
 				<div class="blog__header">
 					<!-- <div class="blog__cata">Tattoo</div> -->
+
 					<h2 class="blog__single__title">{{ blog.title }}</h2>
 					<div class="blog__metas">
 						<div class="blog__meta">By UVXTS</div>
@@ -78,34 +91,18 @@
 				</div>
 				<p>{{ blog.description }}</p>
 			</div>
-			<blockquote>
-				<p> <h5 style = color:#E23A2B>Ink under the skin as temporary as life</h5> </p>
-				<h4>Ugnė</h4>
-				<h5></h5>
-			</blockquote>
-<!--
-			<div class="blog__banner pt-4 pb-5">
-				<img src="{% static 'img/blog-single/banner.jpg' %}" alt="">
-			</div>
-		 -->
-		<div>
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=undefined&product=undefined' async='async'></script>
 
-		</div>
+		<!-- ShareThis BEGIN -->
+		<div class="sharethis-inline-share-buttons"></div>
+		<!-- ShareThis END -->
 
-		<div class="col-md-6">
-			<div class="blog__container post__footer">
-				<div class="row">
-
-							<div class="post__share">
-								<span>Share:</span>
-								{% post_to_facebook  blog.get_absolute_url  "Post to Facebook!" %}
+	<blockquote>
+		<p> <h5 style = color:#E23A2B>Ink under the skin as temporary as life</h5> </p>
+		<h4>Ugnė</h4>
+		<h5></h5>
+	</blockquote>
 
 
-							</div>
-					 </div>
-				</div>
-			</div>
 			<div class="blog__container comment__area">
 				<h2>Leave a Comment</h2>
 				<form class="comment__form">
@@ -123,37 +120,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="container recent__post">
-				<div class="text-center">
-					<h2>You may also like</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="blog__item set-bg" data-setbg="{% static 'img/blog/4.jpg' %}">
-							<div class="blog__content">
-								<div class="blog__date">DEC 18, 2019</div>
-								<h4><a href="{% url 'blogsingle' %}">Assorted Textures FREE Stock Photos</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="blog__item set-bg" data-setbg="{% static 'img/blog/2.jpg' %}">
-							<div class="blog__content">
-								<div class="blog__date">DEC 18, 2019</div>
-								<h4><a href="{% url 'blogsingle' %}">Assorted Textures FREE Stock Photos</a></h4>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="blog__item set-bg" data-setbg="{% static 'img/blog/3.jpg' %}">
-							<div class="blog__content">
-								<div class="blog__date">DEC 18, 2019</div>
-								<h4><a href="{% url 'blogsingle' %}">Assorted Textures FREE Stock Photos</a></h4>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
 		</article>
 	</div>
 	<!-- Blog Page end -->
@@ -171,8 +138,3 @@
 	<script src= "{% static 'js/main.js' %}"></script>
 
 
-<!--	<a href="{% post_to_facebook blog.title %}"><i class="fa fa-facebook"></i></a>
-
-							<a href="#"><i class="fa fa-instagram"></i><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-youtube-play"></i></a>
-						-->

@@ -3,7 +3,7 @@ from .models import Gallery
 
 # Create your views here.
 def gallery(request):
-    gallery = Gallery.objects.all()
+    gallery = Gallery.objects.order_by('-date')
 
     context = {
         'gallery': gallery
