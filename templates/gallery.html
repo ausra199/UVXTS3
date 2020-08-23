@@ -10,6 +10,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Stylesheets -->
 
+		<!-- Meta for sharing to Facebook -->
+	<meta property="og:url"                content="{{ gallery.get_absolute_url }}" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="{{ gallery.title }}" />
+	<meta property="og:description"        content="{{ gallery.description }}" />
+	<meta property="og:image"              content="{{ gallery.image.url }}" />
+	<!-- End Meta for sharing to Facebook -->
+
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
