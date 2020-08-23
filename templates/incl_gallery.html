@@ -1,4 +1,13 @@
 {% load static %}
+
+		<!-- Meta for sharing to Facebook -->
+		<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f428de46f37880012707be8&product=sop' async='async'></script>
+	<meta property="og:url"                content="{{ gallery.get_absolute_url }}" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="{{ gallery.title }}" />
+	<meta property="og:description"        content="{{ gallery.description }}" />
+	<meta property="og:image"              content="{{ gallery.image.url }}" />
+	<!-- End Meta for sharing to Facebook -->
 	<!-- About Page -->
 	<div class="gallery__page">
 		<div class="gallery__warp">
@@ -53,3 +62,4 @@
 	<script src= "{% static 'js/slick.min.js' %}"></script>
 	<script src= "{% static 'js/fresco.min.js' %}"></script>
 	<script src= "{% static 'js/main.js' %}"></script>
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f428de46f37880012707be8&product=sop' async='async'></script>
