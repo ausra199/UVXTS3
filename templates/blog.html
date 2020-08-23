@@ -61,14 +61,21 @@
 <section class="blog__page">
 		<div class="blog__warp">
 			<div class="row blog__grid text-white">
-				<div class="col-lg-8 col-xl-9">
+				<div class=" col-lg-10 col-xl-12 " >
 					<div class="row">
-						<div class="col-md-8 col-lg-7 col-xl-8">
+	<!--					<div class="col-md-8 col-lg-7 col-xl-8">
+	 <div class="{% if blog.blog_id == 4 %} col-md-8 col-lg-7 col-xl-8 {% else %} col-md-4 col-lg-5 col-xl-4 {% endif %} " >
+				<div class="col-lg-10 col-xl-12" align-self-center>
+				<div class=" align-self-center col-md-8 col-lg-12 col-xl-11">
+
+	 -->
+						<div class=" col align-self-center ">
+
 							{% for blog in blogs %}
 							<!-- <div class="blog__item set-bg" data-setbg="{% static 'img/blog/1.jpg' %}">-->
 							<div class="blog__item set-bg" data-setbg="{{ blog.image.url }}">
 								<div class="blog__content">
-									<div class="blog__date">{{ blog.date }}</div>
+									<div class="blog__date">{{ blog.date }} </div>
 									<h3><a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a></h3>
 								</div>
 							</div>
