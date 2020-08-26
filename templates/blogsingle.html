@@ -91,7 +91,7 @@
 					<div class="blog__metas">
 						<div class="blog__meta">By UVXTS</div>
 						<div class="blog__meta">{{ blog.date }}</div>
-						<div class="blog__meta"><span class="fb-comments-count" data-href="https://uvxts.herokuapp.com/blog/"></span> Comments</div>
+						<div class="blog__meta"><span class="fb-comments-count" data-href="https://uvxts.herokuapp.com{{ blog.get_absolute_url }}"></span> Comments</div>
 					</div>
 				</div>
 				<p>{{ blog.description }}</p>
@@ -115,8 +115,8 @@
 				<h2>Leave a Comment</h2>
 				<form class="comment__form">
 					<!-- FB comments -->
-	<div class="fb-comments" data-href="{{ blog.get_absolute_url }}" data-numposts="15" data-width="100%"></div>
-	<!-- end FB comments -->
+	<div class="fb-comments" data-href="https://uvxts.herokuapp.com{{ blog.get_absolute_url }}" data-numposts="15" data-width="100%"></div>
+	<!-- end FB comments --
 
 					<!--
 					<div class="row">
