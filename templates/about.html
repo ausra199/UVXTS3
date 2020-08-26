@@ -17,6 +17,13 @@
 
 	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f4286e129852b001978a2ee&product=sop' async='async'></script>
 
+	<!-- Meta for sharing to Facebook -->
+	<meta property="og:url"                content="{{ blog.get_absolute_url }}" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="{{ blog.title }}" />
+	<meta property="og:description"        content="{{ blog.description }}" />
+	<meta property="og:image"              content="{{ blog.image.url }}" />
+	<!-- End Meta for sharing to Facebook -->
 	<!-- Main Stylesheets
 	<link rel="stylesheet" href="css/style.css"/> -->
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -67,28 +74,10 @@
 	<section class="about__page">
 		<div class="container-fluid">
 			<div class="row">
+
 				<div class="col-lg-6">
-					<div class="experience__text">
-
-				{% for i in obj %}
-				{% video i.video 'small' %}
-				{% endfor %}
-
-
-						<div class="about__meta__info">
-							<h5 style = color:#E23A2B >. . . self destruction. self creation</h5>
-						<!--	<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-						-->
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-1">
-				</div>
-
-				<div class="col-lg-4">
 					<div class="about__text">
-						<h3 class="about__title">Tattoo artist</h3>
+						<!--<h3 class="about__title">Tattoo artist</h3>-->
 						<div class="about__meta">
 							<img src="{% static 'img/profile.jpg' %}" alt="">
 							<div class="about__meta__info">
@@ -102,6 +91,28 @@
 						<img src="{% static 'img/signature.png' %}" alt="">
 					</div>
 				</div>
+				<div class="col-lg-1"> </div>
+				<div class="col-lg-4">
+					<div class="experience__text">
+						<h6 style = color:#E23A2B >. . . self destruction. self creation</h6> <br>
+
+				{% for i in obj %}
+				{% video i.video 'small' %}
+				{% endfor %}
+
+
+						<div class="about__meta__info">
+
+						<!--	<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+						-->
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-1">
+				</div>
+
+
 			</div>
 		</div>
 	</section>
