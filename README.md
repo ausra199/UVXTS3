@@ -22,11 +22,11 @@ Go to * [Live](https://uvxts.herokuapp.com/) to see the result
 * Check if all requirements are installed<br />
 `$ pip list`
 
-![Dependencies](img/pip_list.png?raw=true "Pip list")
+![Dependencies](/static/img/pip_list.png?raw=true "Pip list")
 
 * To start project you must make migrations<br />
 `$ python (or python3) manage.py makemigrations`<br />
-`$ python (or python3) manage.py migrate (will migrate all at once)`
+`$ python (or python3) manage.py migrate`
 
 * Create SuperUser (admin)<br />
 `$ python manage.py createsuperuser`
