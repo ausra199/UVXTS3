@@ -2,7 +2,7 @@
 --------------------------------------
 	Boto | Photography HTML Template
 	Version: 1.0
-	Copyright By: ColorLib
+
 --------------------------------------
 ======================================*/
 
@@ -159,4 +159,5 @@ $(window).on('load', function() {
 	});
 
 })(jQuery);
+
 
