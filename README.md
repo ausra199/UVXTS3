@@ -1,9 +1,9 @@
-# Training Blog
+# Tattoo artist portfolio website
 Powered by Django & Python
 
 ## General idea
 
-This is an Tattoo artist webpage. <br />
+This is an Tattoo artist website. <br />
 Login with your SuperUser.<br />
 Go to * [Live](https://uvxts.herokuapp.com/) to see the result 
 
@@ -44,7 +44,7 @@ Go to * [Live](https://uvxts.herokuapp.com/) to see the result
 * Create heroku<br />
 `$ heroku create`
 
-* to deploy your application to Heroku using Git commands<br />
+* to deploy application to Heroku using Git commands<br />
 `$ git init`
 `$ git add -A`
 `$ git commit -m “Initial Commit”`
